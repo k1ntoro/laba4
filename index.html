@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Калькулятор</h1>
+    <form action="calculator.php" method="post">
+      <input type="number" name="num1" required />
+
+      <br /><br />
+      <input type="radio" name="operation" value="add" id="add" required /> +
+      <br />
+      <input
+        type="radio"
+        name="operation"
+        value="subtract"
+        id="subtract"
+        required
+      />
+      -
+      <br />
+      <input
+        type="radio"
+        name="operation"
+        value="multiply"
+        id="multiply"
+        required
+      />
+      *
+      <br />
+      <input
+        type="radio"
+        name="operation"
+        value="divide"
+        id="divide"
+        required
+      />
+      /
+
+      <br /><br />
+      <input type="number" name="num2" required />
+      <br /><br />
+      <button type="submit" name="calculate">Обчислити</button>
+    </form>
+
+    <h2>Історія використання</h2>
+    <pre>
+        <?php
+            if (file_exists('history.txt')) {
+                echo file_get_contents('history.txt');
+            }
+        ?>
+    </pre>
+  </body>
+</html>
